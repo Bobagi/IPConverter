@@ -26,18 +26,20 @@ const IPConverter: React.FC = () => {
     return (
         <Card style={{ backgroundColor: '#1d1d1d', color: '#fff' }}>
             <Input
-                placeholder="Digite o endereço IP (ex: 192.168.0.1)"
+                placeholder="IP to Convert (ex: 192.168.0.1)"
                 value={ip}
                 onChange={(e) => setIp(e.target.value)}
-                style={{ marginBottom: 10 }}
+                style={{ marginBottom: 10, minWidth: 250 }}
             />
-            <Button
-                type="primary"
-                onClick={handleConvert}
-                style={{ marginBottom: 20 }}
-            >
-                Converter
-            </Button>
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+                <Button
+                    type="primary"
+                    onClick={handleConvert}
+                    style={{ marginBottom: 20 }}
+                >
+                    Converter
+                </Button>
+            </div>
             {converted && (
                 <div>
                     <p>Decimal: {converted.decimal}</p>
