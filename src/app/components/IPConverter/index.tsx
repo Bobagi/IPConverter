@@ -38,7 +38,7 @@ const IPConverter: React.FC = () => {
                     onClick={handleConvert}
                     className="button"
                 >
-                    Converter
+                    Do the magic!
                 </Button>
             </div>
             {converted && (
