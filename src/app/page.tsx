@@ -9,6 +9,12 @@ const Home: React.FC = () => {
             theme={{
                 token: {
                     colorPrimary: '#FFA500',
+                    colorPrimaryBorder: '#FFA500',
+                    colorPrimaryHover: '#FFA500',
+                    colorPrimaryActive: '#FFA500',
+                    colorBgContainer: '#121212',
+                    colorBorder: '#d9d9d9',
+                    colorPrimaryBg: '#FFA500',
                 },
             }}
         >
