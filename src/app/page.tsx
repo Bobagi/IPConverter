@@ -1,19 +1,29 @@
 import React from 'react';
 import IPConverter from './components/IPConverter';
+import { ConfigProvider } from 'antd';
 
 const Home: React.FC = () => {
     return (
-        <div
-            style={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                height: '100vh',
-                backgroundColor: '#121212',
+        <ConfigProvider
+            componentSize="large"
+            theme={{
+                token: {
+                    colorPrimary: '#FFA500',
+                },
             }}
         >
-            <IPConverter />
-        </div>
+            <div
+                style={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    height: '100vh',
+                    backgroundColor: '#121212',
+                }}
+            >
+                <IPConverter />
+            </div>
+        </ConfigProvider>
     );
 };
 
