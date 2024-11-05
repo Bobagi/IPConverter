@@ -1,6 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import { Input, Button, Card } from 'antd';
+import './style.css';
 
 const IPConverter: React.FC = () => {
     const [ip, setIp] = useState<string>('');
@@ -24,18 +25,18 @@ const IPConverter: React.FC = () => {
     };
 
     return (
-        <Card style={{ backgroundColor: '#1d1d1d', color: '#fff' }}>
+        <Card className="card">
             <Input
                 placeholder="IP to Convert (ex: 192.168.0.1)"
                 value={ip}
                 onChange={(e) => setIp(e.target.value)}
-                style={{ marginBottom: 10, minWidth: 250 }}
+                className="input"
             />
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <div className="button-container">
                 <Button
                     type="primary"
                     onClick={handleConvert}
-                    style={{ marginBottom: 20 }}
+                    className="button"
                 >
                     Converter
                 </Button>
