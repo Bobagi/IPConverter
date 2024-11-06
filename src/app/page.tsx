@@ -15,6 +15,7 @@ const Home: React.FC = () => {
                     colorBgContainer: '#121212',
                     colorBorder: '#d9d9d9',
                     colorPrimaryBg: '#FFA500',
+                    colorText: '#d9d9d9',
                 },
             }}
         >
