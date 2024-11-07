@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Input, Button, Card } from 'antd';
 import './style.css';
+import { convertIP } from '@/app/utils/ConvertionUtils';
 
 const IPConverter: React.FC = () => {
     const [ip, setIp] = useState<string>('');
@@ -12,16 +13,8 @@ const IPConverter: React.FC = () => {
     } | null>(null);
 
     const handleConvert = () => {
-        const octets = ip.split('.').map(Number);
-        const decimal = octets.join('.');
-        const hexadecimal = octets
-            .map((octet) => octet.toString(16).padStart(2, '0'))
-            .join('.');
-        const binary = octets
-            .map((octet) => octet.toString(2).padStart(8, '0'))
-            .join('.');
-
-        setConverted({ decimal, hexadecimal, binary });
+        const result = convertIP(ip);
+        setConverted(result);
     };
 
     return (
