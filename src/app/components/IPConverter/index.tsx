@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Input, Button, Card } from 'antd';
 import './style.css';
 import { convertIP } from '@/app/utils/ConvertionUtils';
+import IPCard from '../IPCard';
 
 const IPConverter: React.FC = () => {
     const [ip, setIp] = useState<string>('');
@@ -36,9 +37,9 @@ const IPConverter: React.FC = () => {
             </div>
             {converted && (
                 <div>
-                    <p>Decimal: {converted.decimal}</p>
-                    <p>Hexadecimal: {converted.hexadecimal}</p>
-                    <p>Binário: {converted.binary}</p>
+                    <IPCard title="Decimal" value={converted.decimal} />
+                    <IPCard title="Hexadecimal" value={converted.hexadecimal} />
+                    <IPCard title="Binary" value={converted.binary} />
                 </div>
             )}
         </Card>
